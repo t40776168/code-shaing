@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+       * {
+            margin: 0;
+            padding: 0;
+        }
+      li {
+        list-style: none;
+      }
+    a {
+        text-decoration: none;
+        font-size: 20px;
+        color: aliceblue;
+    }
+      .nav {
+        /* position: relative;
+        top: 10px; */
+        margin: 100px;
+
+      }
+      .nav>li{
+        position: relative;
+        float: left;
+        width: 100px;
+        height: 50px;
+        text-align: center;
+        background-color: #303030;
+      }
+      .nav>li:hover{
+        background-color: black;
+      }
+      .nav li a{
+        display: block;
+        width: 100%;
+            height: 100%;
+    line-height: 50px;
+
+      }
+
+      .nav ul {
+        display: none;
+        position: absolute;
+            top: 50px;
+            left: 0;
+            width: 100%;
+           background-color: royalblue;
+        }
+        .nav ul li a:hover {
+            background-color: rgb(37, 74, 183);
+        }
+      
+    </style>
+  </head>
+  <body>
+    <ul class="nav">
+      <li>
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a href="#">Service</a>
+        <ul>
+          <li><a href="#">Service1</a></li>
+          <li><a href="#">Service2</a></li>
+          <li><a href="#">Service3</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Product</a>
+        <ul>
+          <li><a href="#">all</a></li>
+          <li><a href="#">booking</a></li>
+          <li><a href="#">form</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">About</a>
+        <ul>
+          <li><a href="#">team</a></月li>
+          <li><a href="#">company</a></li>
+          <li><a href="#">cert</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Contact</a>
+        <ul>
+          <li><a href="#">phone</a></li>
+          <li><a href="#">fb</a></li>
+          <li><a href="#">ig</a></li>
+        </ul>
+      </li>
+    </ul>
+  </body>
+  <script>
+     var nav = document.querySelector('.nav');
+     var list = nav.children;
+     for(var i = 0; i < list.length; i++){
+      list[i].onmouseover = function() {
+        this.children[1].style.display = 'block';
+      }
+      list[i].onmouseout = function() {
+        this.children[1].style.display = 'none';
+      }
+     }
+  </script>
+</html>
